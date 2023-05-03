@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectibleMovement : MonoBehaviour
+public class ObjectOscillator : MonoBehaviour
 {
     [SerializeField] private Vector3 movementDistance;
     [SerializeField] private float timeForMovement;

@@ -5,19 +5,6 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     private void OnTriggerEnter(Collider other)
     {
         bool isPlayer = other.gameObject.CompareTag("Player");
@@ -33,4 +20,17 @@ public class Collectible : MonoBehaviour
     {
         Debug.Log("Collision");
     }
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    
 }

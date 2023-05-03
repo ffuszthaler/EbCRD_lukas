@@ -5,32 +5,22 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    // public float speed = 0.1f;
-    
     [SerializeField] private MovementType movementType = 0;
-
+    private Rigidbody rigidBody;
+    
     private Vector3 moveBy;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        ExecuteMovement();
-    }
     
     void OnMovement(InputValue input)
     {
         var inputValue = input.Get<Vector2>();
-        // print(inputValue);
         moveBy = new Vector3(inputValue.x, 0, inputValue.y);
-        //transform.position += new Vector3(inputValue.x, 0, inputValue.y)*_speed;
-
     }
 
+    void OnJump()
+    {
+        rigidBody.AddForce(transform.up * 3, ForceMode.Impulse);
+    }
+    
     void ExecuteMovement()
     {
         if (movementType == MovementType.TransformBased)
@@ -39,10 +29,20 @@ public class Movement : MonoBehaviour
         }
         else if (movementType == MovementType.PhysicalBased)
         {
-            var rigidBody = GetComponent<Rigidbody>();
-            
             // change multiplication value to have greater effect
-            rigidBody.AddForce(moveBy * 10, ForceMode.Acceleration);
+            rigidBody.AddForce(moveBy * 5, ForceMode.Acceleration);
         }
+    }
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        rigidBody = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        ExecuteMovement();
     }
 }
