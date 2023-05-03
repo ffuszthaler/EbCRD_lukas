@@ -52,7 +52,7 @@
                     "id": "82133c11-201f-4b6f-a11d-f6311dffb90c",
                     "path": "2DVector",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=0.1,y=0.1)",
+                    "processors": "",
                     "groups": "",
                     "action": "Movement",
                     "isComposite": true,

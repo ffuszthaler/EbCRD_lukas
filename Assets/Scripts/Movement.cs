@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MoveUpComponent : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     // public float speed = 0.1f;
     
@@ -21,6 +21,15 @@ public class MoveUpComponent : MonoBehaviour
     {
         ExecuteMovement();
     }
+    
+    void OnMovement(InputValue input)
+    {
+        var inputValue = input.Get<Vector2>();
+        // print(inputValue);
+        moveBy = new Vector3(inputValue.x, 0, inputValue.y);
+        //transform.position += new Vector3(inputValue.x, 0, inputValue.y)*_speed;
+
+    }
 
     void ExecuteMovement()
     {
@@ -31,16 +40,9 @@ public class MoveUpComponent : MonoBehaviour
         else if (movementType == MovementType.PhysicalBased)
         {
             var rigidBody = GetComponent<Rigidbody>();
-            rigidBody.AddForce(moveBy * 2, ForceMode.Acceleration);
+            
+            // change multiplication value to have greater effect
+            rigidBody.AddForce(moveBy * 10, ForceMode.Acceleration);
         }
-    }
-    
-    void OnMovement(InputValue input)
-    {
-        var inputValue = input.Get<Vector2>();
-        // print(inputValue);
-        moveBy = new Vector3(inputValue.x, 0, inputValue.y);
-        //transform.position += new Vector3(inputValue.x, 0, inputValue.y)*_speed;
-
     }
 }
