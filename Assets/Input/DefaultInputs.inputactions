@@ -104,17 +104,6 @@
                 },
                 {
                     "name": "",
-                    "id": "063d3c38-439d-4b0e-a53a-c0191fc7184d",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "ScaleVector2(x=0.01,y=0.01)",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "86948899-d939-46c9-a5a7-bbfa7fb92993",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -131,6 +120,45 @@
             "id": "2e8bcfa7-1058-442d-9f28-77367606b222",
             "actions": [],
             "bindings": []
+        },
+        {
+            "name": "Camera",
+            "id": "4b17e502-e5f5-4eb1-a42d-64a91d23e552",
+            "actions": [
+                {
+                    "name": "CameraMovement",
+                    "type": "Value",
+                    "id": "07e13bca-5767-4310-b497-fa37621867a4",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c30e6f13-89a2-4076-be34-d108bc7a776a",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8b32a45-7197-435a-a12f-4ff38aa0b8ee",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

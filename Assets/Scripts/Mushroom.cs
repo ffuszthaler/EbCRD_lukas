@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Mushroom : MonoBehaviour
 {
     private CapsuleCollider capsuleCollider;
     private MeshCollider meshCollider;
-    
+
     // turn mushroom into prefab
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,6 +23,5 @@ public class Mushroom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
