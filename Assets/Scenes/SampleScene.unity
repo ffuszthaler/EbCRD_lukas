@@ -858,6 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 48053396}
+  closestDistanceToPlayer: 3
 --- !u!1001 &1048258836
 PrefabInstance:
   m_ObjectHideFlags: 0
