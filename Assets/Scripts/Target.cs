@@ -10,17 +10,15 @@ public class Target : MonoBehaviour
 
     void SendRay()
     {
-        Debug.Log(Camera.main.transform.forward);
-
         RaycastHit raycastHit;
-        
-        bool hasHitObject = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit);
-        Debug.Log(raycastHit.transform.tag);
+
+        bool hasHitObject =
+            Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out raycastHit);
 
         if (hasHitObject)
         {
             var image = GetComponent<Image>();
-            
+
             if (raycastHit.transform.CompareTag("Enemy"))
             {
                 image.sprite = activeTarget;
@@ -31,7 +29,7 @@ public class Target : MonoBehaviour
             }
         }
     }
-        
+
     // Start is called before the first frame update
     void Start()
     {

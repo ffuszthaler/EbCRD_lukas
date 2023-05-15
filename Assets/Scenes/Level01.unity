@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 48053401}
   - component: {fileID: 48053403}
   - component: {fileID: 48053402}
+  - component: {fileID: 48053404}
   m_Layer: 0
   m_Name: PlayerCube
   m_TagString: Player
@@ -347,6 +348,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &48053404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48053396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e218afeaee01dc4fb1b8e7c44b9b0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1175766349149740425, guid: d46c88695862eb14b8912b113fb4b274, type: 3}
 --- !u!1001 &69506983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2228,6 +2242,7 @@ GameObject:
   - component: {fileID: 1645571350}
   - component: {fileID: 1645571348}
   - component: {fileID: 1645571355}
+  - component: {fileID: 1645571356}
   m_Layer: 0
   m_Name: PlayerSphere
   m_TagString: Player
@@ -2296,7 +2311,7 @@ MonoBehaviour:
   transformMoveSpeed: 6
   physicalMoveSpeed: 5
   physicalJumpHeight: 3
-  movementType: 0
+  movementType: 1
 --- !u!23 &1645571352
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2375,6 +2390,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1645571356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645571347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e218afeaee01dc4fb1b8e7c44b9b0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1175766349149740425, guid: d46c88695862eb14b8912b113fb4b274, type: 3}
 --- !u!4 &1713170930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4330174218624806952, guid: 94728a670b13ce44b8c81395d3e0468c, type: 3}

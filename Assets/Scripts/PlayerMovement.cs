@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (movementType == MovementType.TransformBased)
         {
-            // transform.position += moveBy * (transformMoveSpeed * Time.deltaTime);
             transform.Translate(moveBy * (transformMoveSpeed * Time.deltaTime));
         }
         else if (movementType == MovementType.PhysicalBased)
