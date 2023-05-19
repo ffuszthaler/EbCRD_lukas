@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    [SerializeField] float currentHealth;
+    [field: SerializeField] public float enemyHealth { private set; get; }
 
     public void ReduceHealth(float amount)
     {
-        currentHealth -= amount;
-        Debug.Log("Enemy Health: " + currentHealth);
+        enemyHealth -= amount;
+        if (enemyHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        Debug.Log("Enemy Health: " + enemyHealth);
     }
 
     // Start is called before the first frame update

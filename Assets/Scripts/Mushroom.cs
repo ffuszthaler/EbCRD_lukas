@@ -5,7 +5,6 @@ public class Mushroom : MonoBehaviour
     private CapsuleCollider capsuleCollider;
     private MeshCollider meshCollider;
 
-    // turn mushroom into prefab
     private void OnCollisionEnter(Collision collision)
     {
         bool isPlayer = collision.gameObject.CompareTag("Player");

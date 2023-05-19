@@ -6,6 +6,3 @@
 * Task 3 - DONE
 * Task 4 - DONE
 * Task 5 - DONE
-
-## 2nd Assignment
-## 3rd Assignment
