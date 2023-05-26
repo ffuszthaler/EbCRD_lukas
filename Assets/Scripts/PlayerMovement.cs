@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float transformMoveSpeed = 1f;
-
     public float physicalMoveSpeed = 1f;
     public float physicalJumpHeight = 1f;
 
@@ -12,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rigidBody;
 
     private Vector3 moveBy;
+
+    [SerializeField] private Animator animator;
+    private bool isWalking;
+    private bool isJumpingOrFalling = false;
 
     void OnMovement(InputValue input)
     {
@@ -21,11 +24,29 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump(InputValue input)
     {
+        if (isJumpingOrFalling)
+            return;
+
         rigidBody.AddForce(transform.up * physicalJumpHeight, ForceMode.Impulse);
     }
 
     void ExecuteMovement()
     {
+        isJumpingOrFalling = GetComponent<Rigidbody>().velocity.y < -.035 ||
+                             GetComponent<Rigidbody>().velocity.y > 0.00001;
+
+        if (moveBy == Vector3.zero)
+        {
+            isWalking = false;
+        }
+        else
+        {
+            isWalking = true;
+        }
+
+        animator.SetBool("walk", isWalking);
+        animator.SetBool("jump", isJumpingOrFalling);
+
         if (movementType == MovementType.TransformBased)
         {
             transform.Translate(moveBy * (transformMoveSpeed * Time.deltaTime));
