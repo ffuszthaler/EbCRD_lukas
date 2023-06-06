@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9AD5659F-E0C8-4C25-B963-7C78B64D2FC2}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{9AD5659F-E0C8-4C25-B963-7C78B64D2FC2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Item_Pickups" ID="{90DCB4F1-A201-43E7-A7AE-A2FE988C3C8A}">
+					<ChildrenList>
+						<Action Name="" ID="{B1A2FEF1-210F-4A2E-9B1B-5FAA47FBC451}" ShortID="625743840">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Item_Pickups" ID="{D3BF4846-0B54-4B28-BE52-720758E7DE73}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Walking" ID="{2AB1CE63-AE76-4A6F-BEE0-D5EAD1B74699}">
+					<ChildrenList>
+						<Action Name="" ID="{33A938C8-3603-4BE2-95E4-46A587569FFD}" ShortID="806387168">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Walking" ID="{1D93081B-67AC-4637-BA60-2E81CBB2B46F}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Jump" ID="{BFA080B5-D5EF-40A2-B845-B46F0B1B657B}">
+					<ChildrenList>
+						<Action Name="" ID="{135E7E05-5B1D-4291-8609-4BDEB0E90345}" ShortID="821236017">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="jump" ID="{65ACDC8D-5A72-42EC-A79D-9040EA57E01E}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Enemy_Grunts" ID="{54BF1719-D874-4EB4-B8D8-DDA6173C8131}">
+					<ChildrenList>
+						<Action Name="" ID="{FA8D6541-0AE9-4012-ABC1-15130B170404}" ShortID="912170113">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Enemy_Grunts" ID="{A6111082-6DEB-4A4E-BBBE-E6DC16CB81CA}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_bgmusic" ID="{F2698D11-4680-4F0B-9751-7AB124216C34}">
+					<ChildrenList>
+						<Action Name="" ID="{E2AD6F29-B6AD-48BC-8D42-F98377A8BA05}" ShortID="137142891">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bgmusic" ID="{453DE07F-880A-4B0D-B952-78089FF125F0}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_finished" ID="{918B1948-C1B4-4225-9551-85DA3FBE4D5E}">
+					<ChildrenList>
+						<Action Name="" ID="{990F5629-7114-4E7D-AAB8-C2EEE5B57D58}" ShortID="912101558">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="won" ID="{09E73213-9DB1-4203-B006-5F13CB07B117}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Doors" ID="{E4DCE07A-7A38-40A2-A8FD-F74568C04F3E}">
+					<ChildrenList>
+						<Action Name="" ID="{455BAD56-B58C-41FA-9E19-0DBCCBED3748}" ShortID="87936358">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Doors" ID="{593CCF96-C153-4863-A7C7-AD03A9177BD2}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Damage" ID="{645DC615-5314-4F3B-89E4-916C6EF9C0DE}">
+					<ChildrenList>
+						<Action Name="" ID="{290FF655-9AD8-4F49-940E-54562FB821D1}" ShortID="690374276">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Damage" ID="{FD89BBCC-86BF-48DE-81BD-0750142FEE5C}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_gameover" ID="{115AC653-2D8E-407E-8CFA-76EFB1139313}">
+					<ChildrenList>
+						<Action Name="" ID="{9F05346A-8FE7-4E91-BEA6-925CE2207325}" ShortID="400278793">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gameover" ID="{79A4FFA6-073D-4CD9-8822-93BB5FEC7F30}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Enemy_Death" ID="{E5656694-F7E0-4718-8395-4349AAFABC45}">
+					<ChildrenList>
+						<Action Name="" ID="{7BD4F3ED-26DB-4AFF-A021-F3A932F164AB}" ShortID="618167788">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="enemy_death" ID="{D07B0688-16D4-48DE-83F6-FE1C87EEAF90}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Coffee_Shop_Ambient" ID="{AA97F67E-DA3F-4F0F-A38B-1C620ADB795B}">
+					<ChildrenList>
+						<Action Name="" ID="{CA137F9E-BA84-42F4-8383-868176E0FCA4}" ShortID="91082820">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="coffee_shop_ambient" ID="{9FF588F4-DC2D-4B63-9DDB-44E63919860A}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Car" ID="{F380BF54-6FC8-4412-97DF-6C4C1C009B44}">
+					<ChildrenList>
+						<Action Name="" ID="{EA0E5CDF-4A47-4C30-BE5B-4DB5C83AC560}" ShortID="731989700">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="car1" ID="{CDA17BFD-BD84-4500-AF9E-240446EADA5F}" WorkUnitID="{EE2F2535-561C-47D5-A8CA-83930DAC4CF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

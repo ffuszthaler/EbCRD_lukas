@@ -17,6 +17,7 @@ public class AIEnemyMovement : MonoBehaviour
         if (NavMesh.SamplePosition(targetPosition, out navMeshHit, radius, 1))
         {
             navMeshAgent.SetDestination(targetPosition);
+            AkSoundEngine.PostEvent("Play_Enemy_Grunts", gameObject);
         }
     }
 

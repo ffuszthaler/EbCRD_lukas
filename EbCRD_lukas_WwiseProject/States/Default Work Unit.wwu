@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{70F37659-108A-45E5-B2C9-A3744B0ED688}" SchemaVersion="103">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{70F37659-108A-45E5-B2C9-A3744B0ED688}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="music" ID="{C7493FA3-B50E-43E0-8D67-07AA5FAF1DB8}">
+					<ChildrenList>
+						<State Name="None" ID="{255161D2-D746-48EF-B96A-0F873F9730C0}"/>
+						<State Name="playing" ID="{463F390A-2233-4DD8-B416-B37BE501229E}"/>
+						<State Name="won" ID="{222E7716-80D7-403A-9AC2-C76CDE6ADF13}"/>
+						<State Name="gameover" ID="{8C6E92C8-B9F3-4C8A-B415-C83210F30E66}"/>
+						<State Name="coffee_shop" ID="{85E0D26F-2ECB-4A8E-8CBF-A3B8DA309FC5}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="playing" ID="{463F390A-2233-4DD8-B416-B37BE501229E}"/>
+							<EndState Name="won" ID="{222E7716-80D7-403A-9AC2-C76CDE6ADF13}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="playing" ID="{463F390A-2233-4DD8-B416-B37BE501229E}"/>
+							<EndState Name="gameover" ID="{8C6E92C8-B9F3-4C8A-B415-C83210F30E66}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="playing" ID="{463F390A-2233-4DD8-B416-B37BE501229E}"/>
+							<EndState Name="coffee_shop" ID="{85E0D26F-2ECB-4A8E-8CBF-A3B8DA309FC5}"/>
+							<Time>0</Time>
+							<IsShared>true</IsShared>
+						</Transition>
+					</TransitionList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

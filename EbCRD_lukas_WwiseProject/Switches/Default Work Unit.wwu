@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BF45DBBA-768A-48A0-97E4-53494BCD12EC}" SchemaVersion="103">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{BF45DBBA-768A-48A0-97E4-53494BCD12EC}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="scenes" ID="{21E58478-202F-4348-B133-B60618AAD6CE}">
+					<ChildrenList>
+						<Switch Name="outdoors" ID="{A9165A49-DB42-49DB-853E-5D266D725341}"/>
+						<Switch Name="indoors" ID="{B9E32000-9424-4EB5-859E-B677B9829B02}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

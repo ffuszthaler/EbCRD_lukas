@@ -11,6 +11,7 @@ public class EnemyStats : MonoBehaviour
         enemyHealth -= amount;
         if (enemyHealth <= 0)
         {
+            AkSoundEngine.PostEvent("Play_Enemy_Death", gameObject);
             Destroy(gameObject);
         }
 

@@ -7,9 +7,11 @@ public class Collectible : MonoBehaviour
         bool isPlayer = other.gameObject.CompareTag("Player");
         if (isPlayer)
         {
+            AkSoundEngine.PostEvent("Play_Item_Pickups", gameObject);
+
             Destroy(this.gameObject);
 
-            GameStats.instance.IncreaseScore(3);
+            GameStats.instance.IncreaseScore(1);
         }
     }
 

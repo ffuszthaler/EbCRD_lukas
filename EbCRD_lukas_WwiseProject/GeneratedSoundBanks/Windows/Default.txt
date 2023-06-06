@@ -1,0 +1,71 @@
+Event	ID	Name			Wwise Object Path	Notes
+	325112345	Play_Item_Pickups			\Default Work Unit\Play_Item_Pickups	
+	562256996	Play_Player_Jump			\Default Work Unit\Play_Player_Jump	
+	1966697128	Play_finished			\Default Work Unit\Play_finished	
+	2014237476	Play_Coffee_Shop_Ambient			\Default Work Unit\Play_Coffee_Shop_Ambient	
+	2384134264	Play_bgmusic			\Default Work Unit\Play_bgmusic	
+	2690797144	Play_Car			\Default Work Unit\Play_Car	
+	3046156865	Play_Enemy_Death			\Default Work Unit\Play_Enemy_Death	
+	3174629258	Play_gameover			\Default Work Unit\Play_gameover	
+	3638125099	Play_Player_Damage			\Default Work Unit\Play_Player_Damage	
+	3655372345	Play_Doors			\Default Work Unit\Play_Doors	
+	4033055653	Play_Player_Walking			\Default Work Unit\Play_Player_Walking	
+	4166385128	Play_Enemy_Grunts			\Default Work Unit\Play_Enemy_Grunts	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1544306542	scenes			\Default Work Unit\scenes	
+
+Switch	ID	Name	Switch Group			Notes
+	2730119150	outdoors	scenes			
+	4103860031	indoors	scenes			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	music			\Default Work Unit\music	
+
+State	ID	Name	State Group			Notes
+	219143000	coffee_shop	music			
+	748895195	None	music			
+	1080430619	won	music			
+	1852808225	playing	music			
+	4158285989	gameover	music			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	128094101	coffee_shop	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\bgmusic		
+	294771737	won	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\bgmusic		
+	303524072	won	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\gameover		
+	354192584	gameover	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\won		
+	611751007	playing	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\coffee_shop_ambient		
+	642384407	won	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\coffee_shop_ambient		
+	678447684	gameover	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\coffee_shop_ambient		
+	754487360	gameover	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\bgmusic		
+	798115857	playing	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\won		
+	802054049	coffee_shop	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\gameover		
+	884831611	playing	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\gameover		
+	925530987	coffee_shop	music	\Actor-Mixer Hierarchy\Default Work Unit\Music\won		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	151362964	playerHealth			\Default Work Unit\playerHealth	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1404495	door2	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\door2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Doors\door2		169680
+	13630373	damage2	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\damage2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_Damage\damage2		71740
+	162795453	foot2_indoors	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\foot2_indoors_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_Walking\Indoor_Sequence\foot2_indoors		44132
+	346711612	coffee_shop_ambient	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\coffee1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\coffee_shop_ambient		11531696
+	407592536	damage1	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\damage1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_Damage\damage1		96320
+	463784240	car1	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\car1_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\car1		441064
+	482914879	growl1	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\growl1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_Grunts\growl1		462500
+	491578727	won	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\win_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\won		394236
+	537881028	pop3	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\pop3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Item_Pickups\pop3		6334
+	561120434	jump	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\jump		35422
+	597658703	foot1_indoors	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\foot1_indoors_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_Walking\Indoor_Sequence\foot1_indoors		48064
+	624218133	bgmusic	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\bgmusic_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\bgmusic		3528064
+	635024001	enemy_death	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\enemy_pain1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\enemy_death		22874
+	640121820	pop1	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\pop1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Item_Pickups\pop1		6334
+	705981496	foot2_dirt	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\foot2_dirt_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_Walking\Outdoor_Sequence\foot2_dirt		128064
+	728332440	gameover	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\gameover_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\gameover		1003584
+	769387714	door1	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\door1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Doors\door1		190876
+	895087834	growl2	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\growl2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_Grunts\growl2		253504
+	937478878	foot1_dirt	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\foot1_dirt_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_Walking\Outdoor_Sequence\foot1_dirt		96064
+	939373637	growl3	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\growl3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_Grunts\growl3		210948
+	953109404	pop2	C:\Users\flofu\Desktop\EbCRD_lukas\EbCRD_lukas_WwiseProject\.cache\Windows\SFX\pop2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Item_Pickups\pop2		6334
+

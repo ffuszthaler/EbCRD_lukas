@@ -11,12 +11,28 @@ public class GameStats : MonoBehaviour
     {
         playerScore += value;
         Debug.Log("Score: " + playerScore);
+
+        if (playerScore == 5.0f)
+        {
+            AkSoundEngine.PostEvent("Play_finished", gameObject);
+            AkSoundEngine.SetState("music", "won");
+        }
     }
 
     public void LooseHealth(float value)
     {
         playerHealth -= value;
+
+        AkSoundEngine.SetRTPCValue("playerHealth", playerHealth);
+        AkSoundEngine.PostEvent("Play_Player_Damage", gameObject);
+
         Debug.Log("Health: " + playerHealth);
+
+        if (playerHealth == 0.0f)
+        {
+            AkSoundEngine.PostEvent("Play_gameover", gameObject);
+            AkSoundEngine.SetState("music", "gameover");
+        }
     }
 
     // Start is called before the first frame update
