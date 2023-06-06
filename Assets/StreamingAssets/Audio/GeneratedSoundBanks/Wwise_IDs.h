@@ -79,7 +79,8 @@ namespace AK
 
     namespace AUX_BUSSES
     {
-        static const AkUniqueID REVERB = 348963605U;
+        static const AkUniqueID REVERB1 = 3545700926U;
+        static const AkUniqueID REVERB2 = 3545700925U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

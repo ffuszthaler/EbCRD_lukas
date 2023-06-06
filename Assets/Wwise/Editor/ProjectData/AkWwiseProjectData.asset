@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fa3092019d62d64c974f3fb780f3ffd9
     GuidInternal: 
-    m_lastTime: -8585158885948850369
+    m_lastTime: -8585155806357695609
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,9 +54,9 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
-    - name: Reverb
-      guid: 60b83922cce3f04784678ac572a76ae8
-      id: 348963605
+    - name: Reverb1
+      guid: 1373b13a30475c49825c23614f495b9a
+      id: 3545700926
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -67,10 +67,27 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      - ElementName: Reverb
+      - ElementName: Reverb1
+        ObjectType: 1
+        guid: 1373b13a30475c49825c23614f495b9a
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb1
+    - name: Reverb2
+      guid: 60b83922cce3f04784678ac572a76ae8
+      id: 3545700925
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: fa3092019d62d64c974f3fb780f3ffd9
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Reverb2
         ObjectType: 1
         guid: 60b83922cce3f04784678ac572a76ae8
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb2
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:

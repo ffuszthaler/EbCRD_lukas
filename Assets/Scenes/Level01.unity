@@ -1087,7 +1087,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1c454959425a6994891ed252ec65c751, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: e5eb8f6ae4856a744ae91b5656021ef3, type: 2}
   priority: 0
   auxBusIdInternal: 0
   valueGuidInternal: 

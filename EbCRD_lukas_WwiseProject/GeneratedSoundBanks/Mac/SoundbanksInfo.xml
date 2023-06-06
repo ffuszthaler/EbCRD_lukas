@@ -176,12 +176,13 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1071933655">
+		<SoundBank Id="1355168291" Language="SFX" Hash="63272903">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
-				<AuxBus Id="348963605" Name="Reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb"/>
+				<AuxBus Id="3545700925" Name="Reverb2" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb2"/>
+				<AuxBus Id="3545700926" Name="Reverb1" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb1"/>
 			</IncludedAuxBusses>
 		</SoundBank>
 		<SoundBank Id="2678230381" Language="SFX" Hash="1322376389">

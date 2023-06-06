@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b500477b02095394b8ab4f60bf2f79bd, type: 3}
-  m_Name: 2239B860-E3CC-47F0-8467-8AC572A76AE8
+  m_Name: 3AB17313-4730-495C-825C-23614F495B9A
   m_EditorClassIdentifier: 
-  objectName: Reverb2
-  id: 3545700925
-  guid: 2239B860-E3CC-47F0-8467-8AC572A76AE8
+  objectName: Reverb1
+  id: 3545700926
+  guid: 3AB17313-4730-495C-825C-23614F495B9A
