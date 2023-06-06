@@ -6,7 +6,7 @@ public class WalkSoundEvents : MonoBehaviour
 {
     public void WalkSoundEvent()
     {
-        AkSoundEngine.PostEvent("Play_Player_Walking", gameObject);
+        AkSoundEngine.PostEvent("Play_Player_Walking", transform.parent.gameObject);
     }
 
     // Start is called before the first frame update

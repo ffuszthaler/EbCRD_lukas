@@ -82,20 +82,5 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         ExecuteMovement();
-
-
-        AkSoundEngine.GetSwitch("scenes", gameObject, out switchState);
-
-        Debug.Log(switchState);
-
-        if (SceneManager.GetActiveScene().name == "Level01")
-        {
-            AkSoundEngine.SetSwitch("scenes", "outdoors", gameObject);
-        }
-
-        if (SceneManager.GetActiveScene().name == "Level02")
-        {
-            AkSoundEngine.SetSwitch("scenes", "indoors", gameObject);
-        }
     }
 }

@@ -7,17 +7,12 @@
 * Task 4 - DONE
 * Task 5 - DONE
 
-
-ISSUES: Sounds (footsteps, background music/ambient sounds, ...) do not get stopped when switching between scenes
-
-GET THIS PROJECT TO WORK ON NOTEBOOK
-
 ## Game Audio Implementation
-1. Player Walk - DONE / INDOOR SOUND HAST ISSUES
+1. Player Walk - DONE
 2. Player Jump - DONE
 3. Player Damage - DONE
 4. Enemy Grunt/Movement - DONE
-5. Cars
+5. Cars - DONE
 6. Death/Lose - DONE
 7. Get 5 coins - DONE
 8. Scene Change / Doors - DONE
@@ -40,4 +35,5 @@ RTCP - DONE
 ## Aux Bus
 Environment with Reverb - DONE
 
-## Optimization - 
+## Optimization
+Custom Conversion Settings - DONE
