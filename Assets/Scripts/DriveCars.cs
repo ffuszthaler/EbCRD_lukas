@@ -9,6 +9,8 @@ public class DriveCars : MonoBehaviour
 
     private bool carAtEnd = false;
 
+    private bool playerDamageReceived = false;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("RoadEnd"))
@@ -34,6 +36,39 @@ public class DriveCars : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        bool isPlayer = collision.gameObject.CompareTag("Player");
+        if (isPlayer)
+        {
+            GameStats.instance.LooseHealth(2);
+            speed = speed + 2;
+        }
+    }
+
+    // void carCollision()
+    // {
+    // RaycastHit raycastHit;
+    //
+    // Ray ray = new Ray(transform.position, transform.forward);
+    // Debug.DrawRay(ray.origin, ray.direction, Color.magenta);
+    //
+    // bool hasHitObject = Physics.Raycast(ray, out raycastHit, 3000.0f);
+    //
+    // if (hasHitObject)
+    // {
+    //     if (raycastHit.transform.CompareTag("Player"))
+    //     {
+    // GameStats.instance.LooseHealth(5);
+    // speed = speed + 2;
+    //     }
+    //     else
+    //     {
+    //         // speed = defaultSpeed;
+    //     }
+    // }
+    // }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,23 +80,33 @@ public class DriveCars : MonoBehaviour
     {
         transform.position += transform.forward * speed * Time.deltaTime;
 
-        RaycastHit raycastHit;
-
-        Ray ray = new Ray(transform.position, transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction, Color.magenta);
-
-        bool hasHitObject = Physics.Raycast(ray, out raycastHit, 3000.0f);
-
-        if (hasHitObject)
-        {
-            if (raycastHit.transform.CompareTag("Player"))
-            {
-                speed = 15.0f;
-            }
-            else
-            {
-                speed = defaultSpeed;
-            }
-        }
+        // RaycastHit raycastHit;
+        //
+        // Ray ray = new Ray(transform.position, transform.forward);
+        // Debug.DrawRay(ray.origin, ray.direction, Color.magenta);
+        //
+        // bool hasHitObject = Physics.Raycast(ray, out raycastHit, 3000.0f);
+        //
+        // if (hasHitObject)
+        // {
+        //     if (raycastHit.transform.CompareTag("Player"))
+        //     {
+        //         if (playerDamageReceived == false)
+        //         {
+        //             GameStats.instance.LooseHealth(5);
+        //             speed = speed + 2;
+        //
+        //             playerDamageReceived = true;
+        //         }
+        //
+        //         // carCollision();
+        //     }
+        //     else
+        //     {
+        //         // speed = defaultSpeed;
+        //     }
+        //
+        //     playerDamageReceived = false;
+        // }
     }
 }

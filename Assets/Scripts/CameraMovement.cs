@@ -8,19 +8,14 @@ public class CameraMovement : MonoBehaviour
 
     private Vector3 previousPlayerPosition;
     private float maximumDistanceFromPlayer;
+    private Transform playerTransform;
 
     void OnCameraMovement(InputValue input)
     {
         Vector2 inputVector = input.Get<Vector2>();
 
         // Debug.Log("Camera Movement: " + input);
-        var playerTransform = playerObject.GetComponent<Transform>();
 
-        // camera rotates around player
-        transform.RotateAround(playerTransform.position, new Vector3(0, 1, 0), inputVector.x);
-
-        // change player rotation according to camera
-        playerTransform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
         // use shiftValue to move camera to/from player
         // *sparkle* magic line of code *sparkle*
@@ -36,11 +31,22 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
+    void CameraRotationYAxis(Vector2 inputVector)
+    {
+        // camera rotates around player
+        transform.RotateAround(playerTransform.position, new Vector3(0, 1, 0), inputVector.x);
+
+        // change player rotation according to camera
+        playerTransform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         previousPlayerPosition = playerObject.transform.position;
         maximumDistanceFromPlayer = Mathf.Abs(Vector3.Distance(transform.position, previousPlayerPosition));
+
+        playerTransform = playerObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame

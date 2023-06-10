@@ -1,37 +1,48 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStats : MonoBehaviour
 {
-    [SerializeField] private float playerScore = 0f;
-    [SerializeField] private float playerHealth = 100f;
+    // [SerializeField] private float PlayerScore = 0f;
+    [field: SerializeField] public float PlayerScore { private set; get; }
+
+    // [SerializeField] private float PlayerHealth = 100f;
+    [field: SerializeField] public float PlayerHealth { private set; get; }
 
     public static GameStats instance;
 
     public void IncreaseScore(float value)
     {
-        playerScore += value;
-        Debug.Log("Score: " + playerScore);
+        PlayerScore += value;
+        Debug.Log("Score: " + PlayerScore);
 
-        if (playerScore == 5.0f)
+        if (PlayerScore == 5.0f)
         {
             AkSoundEngine.PostEvent("Play_finished", gameObject);
             AkSoundEngine.SetState("music", "won");
+        }
+
+        if (PlayerScore == 6.0f)
+        {
+            SceneManager.LoadScene("GameWon");
         }
     }
 
     public void LooseHealth(float value)
     {
-        playerHealth -= value;
+        PlayerHealth -= value;
 
-        AkSoundEngine.SetRTPCValue("playerHealth", playerHealth);
+        AkSoundEngine.SetRTPCValue("PlayerHealth", PlayerHealth);
         AkSoundEngine.PostEvent("Play_Player_Damage", gameObject);
 
-        Debug.Log("Health: " + playerHealth);
+        Debug.Log("Health: " + PlayerHealth);
 
-        if (playerHealth == 0.0f)
+        if (PlayerHealth == 0.0f)
         {
             AkSoundEngine.PostEvent("Play_gameover", gameObject);
             AkSoundEngine.SetState("music", "gameover");
+
+            SceneManager.LoadScene("GameOver");
         }
     }
 
