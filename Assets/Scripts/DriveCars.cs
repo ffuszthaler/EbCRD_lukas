@@ -9,7 +9,7 @@ public class DriveCars : MonoBehaviour
 
     private bool carAtEnd = false;
 
-    private bool playerDamageReceived = false;
+    // private bool playerDamageReceived = false;
 
     void OnTriggerEnter(Collider other)
     {

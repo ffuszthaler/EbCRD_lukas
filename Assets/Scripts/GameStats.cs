@@ -3,10 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameStats : MonoBehaviour
 {
-    // [SerializeField] private float PlayerScore = 0f;
     [field: SerializeField] public float PlayerScore { private set; get; }
 
-    // [SerializeField] private float PlayerHealth = 100f;
     [field: SerializeField] public float PlayerHealth { private set; get; }
 
     public static GameStats instance;
@@ -28,6 +26,12 @@ public class GameStats : MonoBehaviour
         }
     }
 
+    public void DecreaseScore(float value)
+    {
+        PlayerScore -= value;
+        Debug.Log("Score: " + PlayerScore);
+    }
+
     public void LooseHealth(float value)
     {
         PlayerHealth -= value;
@@ -44,6 +48,13 @@ public class GameStats : MonoBehaviour
 
             SceneManager.LoadScene("GameOver");
         }
+    }
+
+    public void HealPlayer()
+    {
+        Debug.Log("Health: " + PlayerHealth);
+        PlayerHealth = 100.0f;
+        Debug.Log("Health: " + PlayerHealth);
     }
 
     // Start is called before the first frame update

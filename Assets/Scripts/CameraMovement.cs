@@ -5,6 +5,7 @@ public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private GameObject playerObject;
     [SerializeField] private float closestDistanceToPlayer;
+    [SerializeField] private float maximumAngle;
 
     private Vector3 previousPlayerPosition;
     private float maximumDistanceFromPlayer;
@@ -14,11 +15,42 @@ public class CameraMovement : MonoBehaviour
     {
         Vector2 inputVector = input.Get<Vector2>();
 
-        // Debug.Log("Camera Movement: " + input);
+        CameraRotationYAxis(inputVector);
+        CameraRotationXAxis(inputVector);
+    }
 
+    void OnCameraZoom(InputValue input)
+    {
+        Vector2 inputVector = input.Get<Vector2>();
+        CameraZoom(inputVector);
+    }
 
-        // use shiftValue to move camera to/from player
-        // *sparkle* magic line of code *sparkle*
+    void CameraRotationYAxis(Vector2 inputVector)
+    {
+        // camera rotates around player
+        transform.RotateAround(playerTransform.position, new Vector3(0, 1, 0), inputVector.x);
+        // change player rotation according to camera
+        // playerTransform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+    }
+
+    void CameraRotationXAxis(Vector2 inputVector)
+    {
+        var up = inputVector.y * 0.2f;
+
+        var originalPosition = transform.position;
+        var originalRotation = transform.rotation;
+
+        transform.RotateAround(playerTransform.position, transform.right, up);
+
+        if (Vector3.Angle(playerTransform.forward, transform.forward) > maximumAngle)
+        {
+            transform.position = originalPosition;
+            transform.rotation = originalRotation;
+        }
+    }
+
+    void CameraZoom(Vector2 inputVector)
+    {
         var shiftValue = inputVector.y * 0.05f;
         transform.Translate(new Vector3(0, 0, shiftValue));
 
@@ -29,15 +61,6 @@ public class CameraMovement : MonoBehaviour
             // invert previous shift
             transform.Translate(new Vector3(0, 0, -shiftValue));
         }
-    }
-
-    void CameraRotationYAxis(Vector2 inputVector)
-    {
-        // camera rotates around player
-        transform.RotateAround(playerTransform.position, new Vector3(0, 1, 0), inputVector.x);
-
-        // change player rotation according to camera
-        playerTransform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
     // Start is called before the first frame update

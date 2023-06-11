@@ -58,14 +58,38 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("walk", isWalking);
         animator.SetBool("jump", isJumpingOrFalling);
 
+        if (!isWalking)
+        {
+            transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+            return;
+        }
+
         if (movementType == MovementType.TransformBased)
         {
-            transform.Translate(moveBy * (transformMoveSpeed * Time.deltaTime));
+            RotatePlayer(moveBy);
+            transform.Translate(Vector3.forward * (transformMoveSpeed * Time.deltaTime));
         }
         else if (movementType == MovementType.PhysicalBased)
         {
             rigidBody.AddForce(moveBy * physicalMoveSpeed, ForceMode.Acceleration);
         }
+    }
+
+    private void RotatePlayer(Vector3 rotation)
+    {
+        rotation = Vector3.Normalize(rotation);
+
+        transform.rotation = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0);
+
+        var rotationY = 90 * rotation.x;
+
+        if (rotation.z < 0)
+        {
+            transform.Rotate(0, 180, 0);
+            rotationY *= -1;
+        }
+
+        transform.Rotate(0, rotationY, 0);
     }
 
     private void Awake()

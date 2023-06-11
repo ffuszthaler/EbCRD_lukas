@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameWonMenu : MonoBehaviour
 {
+    public TMP_Text playerScore;
+
     public void RestartGame()
     {
         SceneManager.LoadScene("Level01");
@@ -13,6 +16,7 @@ public class GameWonMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerScore.text = "Score: " + GameStats.instance.PlayerScore.ToString();
     }
 
     // Update is called once per frame

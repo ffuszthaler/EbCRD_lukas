@@ -11,8 +11,7 @@ using UnityEngine.UI;
 [Serializable]
 public struct DialogueElements
 {
-    [TextAreaAttribute]
-    public string dialogueText;
+    [TextAreaAttribute] public string dialogueText;
     public string answerText1;
     public UnityEvent answerAction1;
     public string answerText2;
@@ -21,17 +20,12 @@ public struct DialogueElements
 
 public class Dialogue : MonoBehaviour
 {
-    [SerializeField] 
-    private GameObject dialogueDisplay;
-    [SerializeField] 
-    private TextMeshProUGUI textElement;
-    [SerializeField]
-    private Button answer1Button;
-    [SerializeField] 
-    private Button answer2Button;
-    [SerializeField] 
-    private DialogueElements[] dialogueElements;
-    
+    [SerializeField] private GameObject dialogueDisplay;
+    [SerializeField] private TextMeshProUGUI textElement;
+    [SerializeField] private Button answer1Button;
+    [SerializeField] private Button answer2Button;
+    [SerializeField] private DialogueElements[] dialogueElements;
+
     private GameObject playerReference;
     private bool wasTriggered = false;
 
@@ -41,7 +35,7 @@ public class Dialogue : MonoBehaviour
         dialogueDisplay.SetActive(true);
         LoadDialogueElements(0);
     }
-    
+
     public void CloseDialogue()
     {
         playerReference.GetComponent<PlayerInput>().enabled = true;
@@ -51,7 +45,6 @@ public class Dialogue : MonoBehaviour
 
     public void LoadDialogueElements(int index)
     {
-        Debug.Log(index);
         DialogueElements currentDialogueElements = dialogueElements[index];
         textElement.text = currentDialogueElements.dialogueText;
         if (currentDialogueElements.answerAction1 != null)
@@ -73,6 +66,22 @@ public class Dialogue : MonoBehaviour
         }
         else
             answer2Button.gameObject.SetActive(false);
+    }
+
+    public void Heal()
+    {
+        if (GameStats.instance.PlayerScore >= 5.0f)
+        {
+            GameStats.instance.DecreaseScore(5);
+            GameStats.instance.HealPlayer();
+
+            CloseDialogue();
+        }
+        else
+        {
+            LoadDialogueElements(2);
+            return;
+        }
     }
 
     void OnTriggerEnter(Collider other)

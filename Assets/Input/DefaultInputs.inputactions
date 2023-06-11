@@ -156,12 +156,12 @@
                 },
                 {
                     "name": "CameraZoom",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "6e5c9d09-05aa-42c9-a02d-21863a112957",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -188,15 +188,70 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "2052a846-7263-49a3-be7d-ebfc6bf51ddc",
-                    "path": "",
+                    "name": "One Modifier",
+                    "id": "97f02dcc-9bfb-435d-b546-64b1ba027da1",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraZoom",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "1bb104aa-afbb-4752-baee-8f0b45880169",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "CameraZoom",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "17345bc5-6d52-4bfc-8177-3e485138ffd0",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "One Modifier",
+                    "id": "a3848c27-dc42-4697-8c5f-708ca02e3abc",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraZoom",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "4dff8fb9-e187-4ab8-8e7d-5d95473a50d4",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "c681d74c-6f5d-46d5-9dcd-187972aadeab",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

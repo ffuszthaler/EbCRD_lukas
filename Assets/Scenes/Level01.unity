@@ -4361,6 +4361,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6700302579308972503, guid: e08271228b6be0b46b2ee7e6c3f6d74b, type: 3}
+      propertyPath: maximumAngle
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700302580194740658, guid: e08271228b6be0b46b2ee7e6c3f6d74b, type: 3}
+      propertyPath: m_Name
+      value: PlayerSphere
+      objectReference: {fileID: 0}
     - target: {fileID: 6800591333573435335, guid: e08271228b6be0b46b2ee7e6c3f6d74b, type: 3}
       propertyPath: m_Name
       value: PlayerCamera
